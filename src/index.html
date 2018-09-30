@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" ng-app="Demo">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>MyApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/angular.js"></script>
+  <script src="scripts/angular-route.js"></script>
+  <script src="scripts/script.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <style>
+    body{
+      background: url(../src/images/image1.jpg) no-repeat center center fixed;
+      background-size: cover;
+  }
+ 
+  .heroine{
+    font-family: 'Cairo', sans-serif;
+    color: bisque;
+  }
+  .king{
+    font-family: 'Montserrat', sans-serif;
+    color: cyan;
+  }
+  .hero{
+    color: aliceblue;
+    margin-top: 20%;
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: -.05em;
+    line-height: 1.2em;
+    font-family: 'Uncial Antiqua', cursive;
+}
+  #img_logo{
+      max-width: 100px;
+      max-height: 100px;
+      margin: 0 auto;
+  }
+  footer{
+    background-color: #fff;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width:100%;
+}
+      </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  navbar-inverse navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="/src/images/logo.jpg" width="150" height="50" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/product.html">Products</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Consulting</a>
+            <a class="dropdown-item" href="#">Development</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" data-target="#login-modal" data-toggle="modal" role="button"  >Sign Up</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="# data-target="#login-modal" data-toggle="modal" role="button"  >Log In</a>
+          </div>
+        </li>
+      </ul>
+      <div class="modal fade" id="login-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <img id="img_logo" class="img-thumbnail" src="images/logo.jpg" alt="">
+                </div>
+                <div id="div-forms">
+                    <form>
+                        <div class="modal-body">
+                            <div>
+                                <span>Type your email and password here:</span>
+                            </div>
+                            <input class="form-control" placeholder="Email" type="text" required>
+                            <input class="form-control" placeholder="password" type="password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-primary btn-lg ">Login</button>
+                            </div>
+                            <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-primary btn-lg ">Sign up</button>
+                                </div>
+                        </div>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <app-root></app-root>
+  <ng-view></ng-view>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small text-center blue pt-4">
+    <p>some copyright &copy this is footer</p>
+  </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</html>
